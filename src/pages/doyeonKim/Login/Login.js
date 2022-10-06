@@ -1,11 +1,7 @@
 import React from 'react';
 
 const LoginDoyeon = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div />;
 };
 
 export default LoginDoyeon;
