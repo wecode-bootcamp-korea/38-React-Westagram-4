@@ -1,16 +1,14 @@
 import { useReducer, useRef } from 'react';
 import CommentInsert from '../Comments/CommentInsert';
 import CommentList from '../Comments/CommentList';
-import FeedBottomBar from './FeedBottomBar/FeedBottomBar';
-import FeedTopBar from './FeedTopBar/FeedTopBar';
-import FeedCaption from './FeedCaption/FeedCaption';
+import FeedBottomBar from './FeedBottomBar';
+import FeedTopBar from './FeedTopBar';
+import FeedCaption from './FeedCaption';
 import './Feed.scss';
 
 const initialstate = [];
 
 function reducer(comments, action) {
-  // console.log(action.type);
-
   switch (action.type) {
     case 'ADD':
       return comments.concat(action.comment);
@@ -27,8 +25,6 @@ function reducer(comments, action) {
 
 const Feed = () => {
   const [comments, dispath] = useReducer(reducer, initialstate);
-
-  // console.log(comments);
 
   let nextId = useRef(1);
 
