@@ -1,7 +1,8 @@
-@mixin flex($justify, $align) {
+@mixin flex($justify: center, $align: center, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+  flex-direction: $direction;
 }
 
 .login {
@@ -17,30 +18,12 @@
     margin: 40px auto;
     text-align: center;
   }
-  .flexBox {
-    @include flex(center, center);
-  }
-  .imgBox > img {
-    width: 420px;
-    display: block;
-    margin: 0px auto;
-  }
-  .contentsBox {
-    width: 100%;
-    margin-left: 10px;
-  }
   .loginBox {
     width: 350px;
     height: 396px;
     margin-top: 20px;
     border: 1px solid rgb(211, 211, 211);
     background-color: rgb(255, 255, 255);
-  }
-  .imgInstagram {
-    width: 175px;
-    height: 51px;
-    display: block;
-    margin: 40px auto;
   }
   .accountBox {
     width: 350px;
@@ -60,7 +43,7 @@
     margin-top: 6px;
   }
   .loginButton {
-    @include flex(center, center);
+    @include flex(center, center, null);
     width: 268px;
     height: 30px;
     margin: 14px auto;
@@ -76,7 +59,7 @@
     cursor: default;
   }
   .lineBox {
-    @include flex(center, center);
+    @include flex(center, center, null);
     width: 268px;
     height: 15px;
     margin: 0 auto;
@@ -94,7 +77,7 @@
     text-align: center;
   }
   .facebookBox {
-    @include flex(center, center);
+    @include flex(center, center, null);
     color: rgb(43, 62, 114);
     font-weight: bold;
     font-size: 14px;
@@ -132,7 +115,7 @@
     margin: 20px 0;
   }
   .downloadBox {
-    @include flex(space-between, center);
+    @include flex(space-between, center, null);
     width: 350px;
     height: 44px;
     padding: 0 20px;
