@@ -1,0 +1,225 @@
+.feed {
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.feed_owner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 18px;
+
+  div {
+    display: flex;
+  }
+}
+
+.user_profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url('https://images.unsplash.com/photo-1625897428517-7e2062829a26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.username {
+  line-height: 40px;
+}
+
+.feed_owner {
+  button {
+    width: 26px;
+    height: 26px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2311/2311523.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 26px 26px;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.feed_img {
+  width: 100%;
+  height: 540px;
+  background-image: url('https://images.unsplash.com/uploads/1412594480669535c9ef9/9d85c477?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.feed_bar {
+  padding: 0 18px;
+}
+
+.feed_icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 5px 0;
+
+  > div {
+    display: flex;
+    > div {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.iconImg {
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 26px 26px;
+  cursor: pointer;
+}
+
+.icon_comments {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/7205/7205744.png');
+}
+
+.icon_share {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/4855/4855052.png');
+}
+
+.icon_bookmark {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/5662/5662990.png');
+}
+
+/* full heart */
+.icon_heart_full {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+}
+
+.likes_owner {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.likes {
+  p {
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.feed_des {
+  padding: 0 18px;
+
+  div {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .username {
+    font-weight: 700;
+    &::after {
+      content: '';
+      margin-right: 10px;
+    }
+  }
+}
+
+.des_hashtag {
+  margin: 0 4px;
+  color: #0569ab;
+}
+
+/* 댓글 */
+.comments {
+  padding: 0 18px;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > div:nth-child(1) {
+    display: flex;
+    align-items: baseline;
+    > div:nth-child(1) {
+      font-weight: 700;
+      margin-right: 10px;
+    }
+  }
+
+  > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+
+    > div:nth-child(1) {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+    }
+  }
+}
+
+.deleteBtn {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  color: #0569ab;
+  margin-left: 6px;
+}
+
+.add_comment {
+  margin-top: 8px;
+  padding: 0 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add_comment {
+  input {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  button {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    color: #0569ab;
+  }
+}
+
+.post_date {
+  padding: 0 18px;
+  color: #888;
+  font-size: 14px;
+}
