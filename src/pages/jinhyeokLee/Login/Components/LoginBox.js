@@ -17,7 +17,7 @@ const LoginBox = () => {
   };
 
   //validation 체크
-  const validCheck = () => {
+  const validationCheck = () => {
     return values.userId.includes('@') && values.userPassword.length > 5;
   };
 
@@ -39,7 +39,7 @@ const LoginBox = () => {
           autoComplete="off"
         />
       </form>
-      {validCheck() ? (
+      {validationCheck() ? (
         <button
           className="loginButton"
           onClick={() => navigate(`/main-jinhyeok`)}
