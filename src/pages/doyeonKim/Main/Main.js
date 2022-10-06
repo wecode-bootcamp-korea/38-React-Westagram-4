@@ -1,11 +1,7 @@
 import React from 'react';
 
 const MainDoyeon = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div />;
 };
 
 export default MainDoyeon;
