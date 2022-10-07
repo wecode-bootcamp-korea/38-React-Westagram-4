@@ -1,7 +1,9 @@
 import heartIcon from '../../../assets/images/eunjikang/icons/heart.png';
 import redHeartIcon from '../../../assets/images/eunjikang/icons/red_heart.png';
 
-const CommentItem = ({ comment, onRemove, onToggle }) => {
+const CommentItem = props => {
+  const { comment, onRemove, onToggle } = props;
+
   return (
     <div className="comment_list">
       <div>

@@ -3,21 +3,21 @@ import { useState } from 'react';
 const CommentInsert = ({ onInsert }) => {
   const [commentInput, setCommentInput] = useState('');
 
-  const onChange = e => {
+  const saveComment = e => {
     setCommentInput(e.target.value);
   };
 
-  const onSubmit = e => {
+  const onCommentSubmit = e => {
     e.preventDefault();
     onInsert(commentInput);
     setCommentInput('');
   };
 
   return (
-    <form className="add_comment" onSubmit={onSubmit}>
+    <form className="add_comment" onSubmit={onCommentSubmit}>
       <input
         type="text"
-        onChange={onChange}
+        onChange={saveComment}
         value={commentInput}
         placeholder="Add a comment.."
       />

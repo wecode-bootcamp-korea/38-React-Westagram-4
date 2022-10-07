@@ -28,6 +28,7 @@ const Feed = () => {
 
   let nextId = useRef(1);
 
+  // 댓글 추가
   const onInsert = text => {
     const comment = {
       id: nextId.current,
@@ -39,10 +40,12 @@ const Feed = () => {
     dispath({ type: 'ADD', comment });
   };
 
+  // 댓글 삭제
   const onRemove = id => {
     dispath({ type: 'DELETE', id });
   };
 
+  // 댓글 좋아요
   const onToggle = id => {
     dispath({ type: 'LIKE', id });
   };
