@@ -8,11 +8,11 @@ const Login = () => {
   const btn = useRef(null);
   const navigate = useNavigate();
 
-  const onIdChange = e => {
+  const saveUserId = e => {
     setId(e.target.value);
   };
 
-  const onPasswordChange = e => {
+  const saveUserPwd = e => {
     setPassword(e.target.value);
   };
 
@@ -20,51 +20,30 @@ const Login = () => {
     e.preventDefault();
     setId('');
     setPassword('');
-    validate();
-  };
-
-  const changeColor = () => {
-    if ((id.includes('@') || id.length > 5) && password.length > 5) {
-      btn.current.style.backgroundColor = 'black';
-    } else {
-      btn.current.style.backgroundColor = 'rgb(165, 205, 241)';
-    }
   };
 
   const validate = () => {
-    if (id == null || id === '') {
-      alert('Please enter the email.');
-      return false;
-    } else if (!id.includes('@') || id.length < 5) {
-      alert('Please enter a valid email address.');
-      return false;
-    } else if (password == null || password === '') {
-      alert('Please enter the password.');
-      return false;
-    } else if (password.length < 6) {
-      alert('Please enter a valid password');
-    } else {
-      alert('Welcome Back!');
-      navigate('/main-eunji');
-    }
+    return (id.includes('@') || id.length > 5) && password.length > 5
+      ? (btn.current.style.backgroundColor = 'black')
+      : (btn.current.style.backgroundColor = 'rgb(165, 205, 241)');
   };
 
   return (
     <main className="login_main">
       <div>
         <div className="logo">Westagram</div>
-        <form className="login_form" onSubmit={onSubmit} onKeyUp={changeColor}>
+        <form className="login_form" onSubmit={onSubmit} onKeyUp={validate}>
           <input
             type="email"
             value={id}
-            onChange={onIdChange}
+            onChange={saveUserId}
             required
             placeholder="Phone number, username, or email"
           />
           <input
             type="password"
             value={password}
-            onChange={onPasswordChange}
+            onChange={saveUserPwd}
             required
             placeholder="password"
           />
@@ -72,9 +51,7 @@ const Login = () => {
             Sign In
           </button>
         </form>
-        <a href="#" className="find_password">
-          Forgot password
-        </a>
+        <span className="find_password">Forgot password</span>
       </div>
     </main>
   );
