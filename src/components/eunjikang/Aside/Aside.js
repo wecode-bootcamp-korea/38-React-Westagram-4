@@ -1,18 +1,22 @@
-import Stories from '../Stories/Stories';
-import Suggestions from '../Suggestions/Suggestions';
 import './Aside.scss';
-// import storyUsers from '/eunjikang/data/storyUsers.json';
-// import suggestionUsers from 'eunjikang/data/suggestionUsers.json';
+import { storyUsers } from './story/storyUsers';
+import { suggestionUsers } from './suggestion/suggestionUsers';
+import AsideStories from './story/AsideStories';
+import AsideSuggestions from './suggestion/AsideSuggestions';
 
 const Aside = () => {
   return (
-    <section className="myaccount">
-      <div className="user_profile my_profile" />
-      <div>
-        <div className="username">iamchloe</div>
-        <div className="user_intro">Front-end developer</div>
-      </div>
-    </section>
+    <>
+      <section className="myaccount">
+        <div className="user_profile my_profile" />
+        <div>
+          <div className="username">iamchloe</div>
+          <div className="user_intro">Front-end developer</div>
+        </div>
+      </section>
+      <AsideStories storyUsers={storyUsers} />
+      <AsideSuggestions suggestionUsers={suggestionUsers} />
+    </>
   );
 };
 
