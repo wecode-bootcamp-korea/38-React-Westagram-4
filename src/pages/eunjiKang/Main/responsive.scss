@@ -54,7 +54,7 @@ $desktop: 1000px;
 
   .main_right {
     width: 320px;
-    display: block;
+    display: block !important;
     flex-shrink: 0;
   }
 }
