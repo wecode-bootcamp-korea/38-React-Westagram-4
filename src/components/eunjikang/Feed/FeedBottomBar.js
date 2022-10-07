@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import heartIcon from '../../../assets/Main/icons/heart.png';
-import redHeartIcon from '../../../assets/Main/icons/red_heart.png';
+import heartIcon from '../../../assets/images/eunjikang/icons/heart.png';
+import redHeartIcon from '../../../assets/images/eunjikang/icons/red_heart.png';
 
 const FeedBottomBar = () => {
   const [like, setLike] = useState(false);
