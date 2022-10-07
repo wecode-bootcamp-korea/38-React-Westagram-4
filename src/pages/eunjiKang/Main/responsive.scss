@@ -1,0 +1,60 @@
+$mobile: 650px;
+$desktop: 1000px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// start
+
+@include mobile {
+  .logo {
+    > div {
+      display: none;
+    }
+  }
+
+  .search {
+    input {
+      display: none;
+    }
+  }
+}
+
+@include desktop {
+  header {
+    .wrapper {
+      width: 1000px;
+    }
+  }
+
+  main {
+    .wrapper {
+      width: 1000px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .feeds {
+    width: 540px;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+  }
+
+  .main_right {
+    width: 320px;
+    display: block;
+    flex-shrink: 0;
+  }
+}

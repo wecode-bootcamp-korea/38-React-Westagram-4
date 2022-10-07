@@ -1,4 +1,5 @@
 import './Main.scss';
+import './responsive.scss';
 import Aside from '../../../components/eunjikang/Aside/Aside';
 import Feed from '../../../components/eunjikang/Feed/Feed';
 
