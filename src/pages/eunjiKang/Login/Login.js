@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
+  const [disabled, setDisabled] = useState(true);
   const btn = useRef(null);
   const navigate = useNavigate();
 
@@ -23,27 +24,17 @@ const Login = () => {
     reconfirm();
   };
 
+  const isValid = (id.includes('@') || id.length > 5) && password.length > 5;
+
   const validate = () => {
-    return (id.includes('@') || id.length > 5) && password.length > 5
-      ? (btn.current.style.backgroundColor = 'black')
-      : (btn.current.style.backgroundColor = 'rgb(165, 205, 241)');
+    btn.current.style.backgroundColor = isValid
+      ? 'black'
+      : 'rgb(165, 205, 241)';
+    isValid && setDisabled(false);
   };
 
   const reconfirm = () => {
-    if (id == null || id === '') {
-      alert('Please enter the email.');
-      return false;
-    } else if (!id.includes('@') || id.length < 5) {
-      alert('Please enter a valid email address.');
-      return false;
-    } else if (password == null || password === '') {
-      alert('Please enter the password.');
-      return false;
-    } else if (password.length < 6) {
-      alert('Please enter a valid password');
-    } else {
-      navigate('/main-eunji');
-    }
+    isValid && navigate('/main-eunji');
   };
 
   return (
@@ -65,7 +56,7 @@ const Login = () => {
             required
             placeholder="password"
           />
-          <button type="submit" id="submit_btn" ref={btn}>
+          <button type="submit" disabled={disabled} id="submit_btn" ref={btn}>
             Sign In
           </button>
         </form>
