@@ -7,6 +7,7 @@ import MainDoyeon from './pages/doyeonKim/Main/Main';
 import MainEunji from './pages/eunjiKang/Main/Main';
 import MainJinhyeok from './pages/jinhyeokLee/Main/Main';
 import './styles/reset.scss';
+import './styles/common.scss';
 
 const Router = () => {
   return (
