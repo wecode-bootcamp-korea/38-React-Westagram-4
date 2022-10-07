@@ -67,19 +67,56 @@ const Nav = () => {
               {isShowing && (
                 <ul className="sub_nav">
                   <li
-                    style={{ backgroundImage: 'url(/images/Nav/account.png)' }}
+                    style={{
+                      backgroundImage: 'url(/images/Nav/switch.png)',
+                    }}
                   >
-                    My account
+                    <Link to="/main-doyeon">
+                      Switch to <b>Doyoen</b>
+                    </Link>
                   </li>
                   <li
-                    style={{ backgroundImage: 'url(/images/Nav/setting.png)' }}
+                    style={{
+                      backgroundImage: 'url(/images/Nav/switch.png)',
+                    }}
                   >
-                    Settings
+                    <Link to="/main-jinhyeok">
+                      Switch to <b>Jinhyeok</b>
+                    </Link>
                   </li>
                   <li
-                    style={{ backgroundImage: 'url(/images/Nav/logout.png)' }}
+                    style={{
+                      backgroundImage: 'url(/images/Nav/switch.png)',
+                    }}
                   >
-                    <Link to="/">Log out</Link>
+                    <Link to="/main-eunji">
+                      Switch to <b>Eunji</b>
+                    </Link>
+                  </li>
+                  <li
+                    style={{
+                      backgroundImage: 'url(/images/Nav/doyeon.png)',
+                    }}
+                  >
+                    <Link to="/login-doyeon">
+                      Log Out to <b>Doyeon</b>
+                    </Link>
+                  </li>
+                  <li
+                    style={{ backgroundImage: 'url(/images/Nav/jinhyeok.png)' }}
+                  >
+                    <Link to="/login-jinhyeok">
+                      Log Out to <b>Jinhyeok</b>
+                    </Link>
+                  </li>
+                  <li
+                    style={{
+                      backgroundImage: 'url(/images/Nav/eunji.png)',
+                    }}
+                  >
+                    <Link to="/login-eunji">
+                      Log Out to <b>Eunji</b>
+                    </Link>
                   </li>
                 </ul>
               )}
