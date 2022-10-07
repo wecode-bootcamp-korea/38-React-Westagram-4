@@ -13,7 +13,7 @@ const FontAwesome = () => {
       icon={heartActive === false ? faHeart : faSolidHeart}
       onClick={handleHeartActive}
       color="red"
-      style={{ marginRight: '15px' }}
+      style={{ marginRight: '15px', width: '15px' }}
     />
   );
 };

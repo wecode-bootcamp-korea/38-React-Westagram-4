@@ -23,7 +23,7 @@ const FeedInput = ({ value, setValue, comments, setComments }) => {
 
   //엔터키로 함수 실행
   const onKeyDownHandler = e => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && value.trim().length !== 0) {
       saveComments();
     }
   };
@@ -35,7 +35,7 @@ const FeedInput = ({ value, setValue, comments, setComments }) => {
         type="text"
         placeholder="댓글 달기..."
         value={value}
-        onKeyDown={onKeyDownHandler}
+        onKeyPress={onKeyDownHandler}
         onChange={e => {
           setValue(e.target.value);
         }}

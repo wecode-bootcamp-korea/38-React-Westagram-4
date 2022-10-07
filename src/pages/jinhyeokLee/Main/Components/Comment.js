@@ -6,15 +6,16 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 const Comment = props => {
   return (
     <div className="feedComment">
-      <p>
+      <p className="feedCommentNickname">
         zi_nukk
-        <span>{props.value}</span>
+        <span className="feedCommentOne">{props.value}</span>
       </p>
       <div>
         <FontAwesome />
         <FontAwesomeIcon
           icon={faXmark}
           id={props.idx}
+          style={{ width: '12px', marginRight: '10px' }}
           onClick={() => {
             props.DeleteBtn(props.id);
           }}
