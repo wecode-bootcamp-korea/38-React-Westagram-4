@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import FeedInput from './MainFeedBox/FeedInput';
-import FeedLike from './MainFeedBox/FeedLike';
-import FeedImg from './MainFeedBox/FeedImg';
-import MainFeedBox from './MainFeedBox/MainFeedBox';
-import FeedComments from './MainFeedBox/FeedComments';
-import FeedPost from './MainFeedBox/FeedPost';
-import FeedIcon from './MainFeedBox/FeedIcon';
-import FeedHeader from './MainFeedBox/FeedHeader';
+import FeedInput from '../Components/MainFeedBox/FeedInput';
+import FeedLike from '../Components/MainFeedBox/FeedLike';
+import FeedImg from '../Components/MainFeedBox/FeedImg';
+import MainFeedBox from '../Components/MainFeedBox/MainFeedBox';
+import FeedComments from '../Components/MainFeedBox/FeedComments';
+import FeedPost from '../Components/MainFeedBox/FeedPost';
+import FeedIcon from '../Components/MainFeedBox/FeedIcon';
+import FeedHeader from '../Components/MainFeedBox/FeedHeader';
 
 const Modal = ({
   setIsModal,

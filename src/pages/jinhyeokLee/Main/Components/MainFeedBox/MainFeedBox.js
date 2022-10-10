@@ -6,7 +6,7 @@ import FeedComments from './FeedComments';
 import FeedInput from './FeedInput';
 import FeedIcon from './FeedIcon';
 import FeedPost from './FeedPost';
-import Modal from '../Modal';
+import Modal from '../../shared/Modal';
 
 const MainFeedBox = () => {
   //댓글 value값 가져와서 저장
