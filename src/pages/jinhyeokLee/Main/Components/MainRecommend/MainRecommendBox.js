@@ -32,6 +32,11 @@ const MainRecommendBox = () => {
           <p>팔로우</p>
         </div>
       ))}
+      <ul className="recommendAside">
+        {MockData.asideData.map((cur, idx) => (
+          <li key={idx}>{cur}</li>
+        ))}
+      </ul>
     </div>
   );
 };

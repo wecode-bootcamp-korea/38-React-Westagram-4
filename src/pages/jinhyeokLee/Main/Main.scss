@@ -358,7 +358,7 @@
     width: 100%;
     margin-bottom: 10px;
     padding-left: 5px;
-    margin-top: 15px;
+    margin: 15px 0;
   }
   .friendsList {
     @include flex(null, center, null);
@@ -426,5 +426,14 @@
     position: fixed;
     bottom: 125px;
     background: white;
+  }
+  .recommendAside > li {
+    display: inline-block;
+    color: rgb(150, 150, 150);
+    font-size: 12px;
+  }
+  .recommendAside > li:not(:last-child)::after {
+    content: '·';
+    margin: 0 3px;
   }
 }
