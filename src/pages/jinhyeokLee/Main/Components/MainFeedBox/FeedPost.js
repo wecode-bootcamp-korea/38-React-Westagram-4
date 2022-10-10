@@ -5,7 +5,7 @@ const FeedPost = props => {
   return (
     <div className="feedPostBox">
       <p className="feedPostData">
-        <span className="feedNickname">zi_nukk</span>{' '}
+        <span className="feedNickname">{props.nickname}</span>{' '}
         <span>{props.feedDescription}</span>
       </p>
     </div>

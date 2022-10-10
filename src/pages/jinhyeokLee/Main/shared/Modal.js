@@ -56,7 +56,7 @@ const Modal = ({
             <FeedHeader profileImg={profileImg} nickname={nickname} />
           </div>
           <div className="modalComments">
-            <FeedPost feedDescription={feedDescription} />
+            <FeedPost nickname={nickname} feedDescription={feedDescription} />
             <FeedComments
               modalComments={modalComments}
               comments={comments}

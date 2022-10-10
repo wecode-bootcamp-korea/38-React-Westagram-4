@@ -1,5 +1,6 @@
 import React from 'react';
 import { MockData } from '../../shared/MockData';
+import MainRecommendList from './MainRecommendList';
 
 const MainRecommendBox = () => {
   return (
@@ -7,7 +8,10 @@ const MainRecommendBox = () => {
       <div className="myProfileBox">
         <div className="myProfile">
           <div className="myProfileBg">
-            <img src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+            <img
+              src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png"
+              alt="사진"
+            />
           </div>
           <div className="myProfileText">
             <h4>zi_nukk</h4>
@@ -21,16 +25,7 @@ const MainRecommendBox = () => {
         <p className="seeAll">모두 보기</p>
       </div>
       {MockData.recommendData.map((cur, idx) => (
-        <div className="friendsListBox" key={idx}>
-          <div className="friendsList">
-            <img src={cur.img} alt="프로필이미지" />
-            <div className="friendsListText">
-              <h5>{cur.nickname}</h5>
-              <p>{cur.description}</p>
-            </div>
-          </div>
-          <p>팔로우</p>
-        </div>
+        <MainRecommendList {...cur} key={idx} />
       ))}
       <ul className="recommendAside">
         {MockData.asideData.map((cur, idx) => (

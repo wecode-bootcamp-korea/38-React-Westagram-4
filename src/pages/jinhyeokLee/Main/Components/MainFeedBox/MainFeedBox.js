@@ -29,7 +29,7 @@ const MainFeedBox = props => {
       <FeedImg feedImg={feedImg} />
       <FeedIcon />
       <FeedLike like={like} likeSum={likeSum} />
-      <FeedPost feedDescription={feedDescription} />
+      <FeedPost nickname={nickname} feedDescription={feedDescription} />
       <FeedComments
         comments={comments}
         setComments={setComments}

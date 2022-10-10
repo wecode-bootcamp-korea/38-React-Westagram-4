@@ -56,12 +56,22 @@ export const MockData = {
     {
       profileImg:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6UBRf0I6knHvGQGLcYH8fL0ydq4hHi6f2yg&usqp=CAU',
-      nickname: 'asdads',
+      nickname: 'dpr_live',
       feedImg:
-        'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      feedDescription: '이것은 피드 내용이다~,~',
-      like: 'gangnam.matzip',
-      likeSum: '외 174명',
+        'https://mblogthumb-phinf.pstatic.net/MjAxODA2MTZfNjMg/MDAxNTI5MTQ3Mzg1MTY5.1-hHZfrMV1K_5B145QogNIJb5crveE4Twk6i2OTFMUcg.-XVhdLcc7lfFibF2IlkgECnu_dGI_LLmnlTOAsopAMUg.JPEG.choeara/IMG_1690.jpg?type=w800',
+      feedDescription: '다빈이 하고 싶은 거 다 해',
+      like: 'dpr_ian',
+      likeSum: '외 412명',
+    },
+    {
+      profileImg:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6UBRf0I6knHvGQGLcYH8fL0ydq4hHi6f2yg&usqp=CAU',
+      nickname: 'young_lee0238',
+      feedImg:
+        'https://images.chosun.com/resizer/X8Qnmjv4hFudAKgU3gBn9ru8rnM=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/GCXQAM6M3TTGA3FI6W3DMLNELI.jpg',
+      feedDescription: '차쥐뿔 너무 재밌어,,',
+      like: 'zi_nukk',
+      likeSum: '외 245명',
     },
     {
       profileImg:
@@ -69,8 +79,18 @@ export const MockData = {
       nickname: 'zi_nukk',
       feedImg:
         'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      feedDescription: '이것은 피드 내용이다~,~',
+      feedDescription: '갬-성',
       like: 'gangnam.matzip',
+      likeSum: '외 174명',
+    },
+    {
+      profileImg:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6UBRf0I6knHvGQGLcYH8fL0ydq4hHi6f2yg&usqp=CAU',
+      nickname: 'mi._.yeon',
+      feedImg:
+        'https://mblogthumb-phinf.pstatic.net/MjAyMTA3MTJfMjYx/MDAxNjI2MDQ1Mzk2NzI1.wPOZpA4eJ-hOLL5ktbeD8HneX0Mxm5bAnojZV1NB-SMg.EoU_Se3-qSDCSllBt5KHvd_15O3nh5ZP5nxe5CmMizEg.JPEG.oyeonwol0311/1626045389738.jpg?type=w800',
+      feedDescription: '하,,',
+      like: 'neverland',
       likeSum: '외 174명',
     },
   ],
