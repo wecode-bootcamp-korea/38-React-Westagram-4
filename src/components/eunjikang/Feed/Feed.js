@@ -23,8 +23,17 @@ function reducer(comments, action) {
   }
 }
 
-const Feed = () => {
+const Feed = ({ feed }) => {
   const [comments, dispath] = useReducer(reducer, initialstate);
+  const {
+    username,
+    userImg,
+    feedImg,
+    feedCaption,
+    hashtag,
+    postedTime,
+    liked,
+  } = feed;
 
   let nextId = useRef(1);
 
@@ -48,23 +57,28 @@ const Feed = () => {
   };
 
   return (
-    <div className="feeds">
-      <article className="feed">
-        <FeedTopBar />
-        <div className="feed_img" />
-        <FeedBottomBar />
-        <FeedCaption />
-        <CommentList
-          comments={comments}
-          onRemove={onRemove}
-          onToggle={onToggle}
-        />
-        <CommentInsert onInsert={onInsert} />
-        <div className="post_date">
-          <p>4hours ago</p>
-        </div>
-      </article>
-    </div>
+    <article className="feed">
+      <FeedTopBar username={username} userImg={userImg} />
+      <div
+        className="feed_img"
+        style={{ backgroundImage: `url("${feedImg}")` }}
+      />
+      <FeedBottomBar liked={liked} />
+      <FeedCaption
+        username={username}
+        feedCaption={feedCaption}
+        hashtag={hashtag}
+      />
+      <CommentList
+        comments={comments}
+        onRemove={onRemove}
+        onToggle={onToggle}
+      />
+      <CommentInsert onInsert={onInsert} />
+      <div className="post_date">
+        <p>{postedTime}</p>
+      </div>
+    </article>
   );
 };
 

@@ -1,13 +1,16 @@
-const FeedCaption = () => {
+const FeedCaption = ({ username, feedCaption, hashtag }) => {
+  // console.log(hashtag);
   return (
     <div className="feed_des">
       <div>
-        <span className="username">blank</span>
+        <span className="username">{username}</span>
         <p className="des">
-          Throwback photo
-          <span className="des_hashtag">#newyork</span>
-          <span className="des_hashtag">#throwback</span>
-          <span />
+          {feedCaption}
+          {hashtag.map(el => (
+            <span key={el.id} className="des_hashtag">
+              {el.hashtagCaption}
+            </span>
+          ))}
         </p>
       </div>
     </div>
