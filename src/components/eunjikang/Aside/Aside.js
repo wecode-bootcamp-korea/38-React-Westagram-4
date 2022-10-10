@@ -3,6 +3,7 @@ import { storyUsers } from './story/storyUsers';
 import { suggestionUsers } from './suggestion/suggestionUsers';
 import AsideStories from './story/AsideStories';
 import AsideSuggestions from './suggestion/AsideSuggestions';
+import Footer from './Footer/Footer';
 
 const Aside = () => {
   return (
@@ -16,6 +17,7 @@ const Aside = () => {
       </section>
       <AsideStories storyUsers={storyUsers} />
       <AsideSuggestions suggestionUsers={suggestionUsers} />
+      <Footer />
     </>
   );
 };
