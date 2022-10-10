@@ -368,7 +368,6 @@
     border-radius: 32px;
   }
   .friendsListText {
-    @include flex(center, center, null);
     width: 100%;
     margin-left: 10px;
   }

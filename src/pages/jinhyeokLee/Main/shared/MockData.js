@@ -25,64 +25,31 @@ export const MockData = {
       name: 'chris_9532',
     },
   ],
-  feedData: [
+  recommendData: [
     {
-      profileImg:
-        'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      name: 'zi_nukk',
-      feedImg: '',
-      likeImg: '',
-    },
-  ],
-  feedComment: [
-    {
-      name: 'gwan_ha_5348',
-      text: '그래도 해야지',
+      img: 'https://cdn.topclass.chosun.com/news/photo/201904/10128_26718_2054.jpg',
+      nickname: '2j_bread',
+      description: '회원님을 위한 추천',
     },
     {
-      name: 'silver._.ing',
-      text: '견뎌',
+      img: 'https://mblogthumb-phinf.pstatic.net/MjAxODAzMjZfMTA4/MDAxNTIyMDU2Mjc0Mjk3.Oo-Z75xA-Xc77RoFzcN-CXaTRvoQH7Z48BWhUbojcOQg.V_C23MWBgwlROwBetpum7SZQ_Kk22mCOsI5dyeDF5hwg.JPEG.bogaj/IMG_1139.JPG?type=w800',
+      nickname: 'twin.klestart1004',
+      description: 'ohschul님 외 2명이 팔로우합니다',
     },
     {
-      name: 'sy_n2',
-      text: '이겨내',
-    },
-  ],
-  searchData: [
-    {
-      img: 'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      id: 'qwedwa',
-      nickname: '테스트',
+      img: 'https://mblogthumb-phinf.pstatic.net/MjAyMDExMTJfODAg/MDAxNjA1MTQ2ODg2MDgy.U1xVdEQ7RRx8_9PP6XkbROtZx7oQApmWy7OO54UvUfAg.KAR1T6hba_z6lgKuwEAL86kxaxQVwHhHexzVGOF35m0g.PNG.rapidoworam/%EB%9E%98%EC%9B%904.PNG?type=w800',
+      nickname: 'mong_oqo',
+      description: 'Instagram 신규 가입',
     },
     {
-      img: 'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      id: 'asdsda',
-      nickname: '테스트',
+      img: 'https://file.mk.co.kr/meet/neds/2021/02/image_readtop_2021_120331_16124378164531880.jpg',
+      nickname: 'gwanhyeon9',
+      description: '회원님을 위한 추천',
     },
     {
-      img: 'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      id: 'fgdfash',
-      nickname: '테스트',
-    },
-    {
-      img: 'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      id: 'asfbj',
-      nickname: '테스트',
-    },
-    {
-      img: 'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      id: 'glsdihgsn',
-      nickname: '테스트',
-    },
-    {
-      img: 'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      id: 'askdufgasgf',
-      nickname: '테스트',
-    },
-    {
-      img: 'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
-      id: 'qwawfe',
-      nickname: '테스트',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6UBRf0I6knHvGQGLcYH8fL0ydq4hHi6f2yg&usqp=CAU',
+      nickname: 'someonesroom_marquage',
+      description: 'hyeob2019님 외 5명이 팔로우합니다',
     },
   ],
 };
