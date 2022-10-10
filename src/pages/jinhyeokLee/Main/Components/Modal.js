@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
-import FeedComments from './FeedComments';
-import FeedImg from './FeedImg';
-import FeedInput from './FeedInput';
-import FeedLike from './FeedLike';
-import MainFeedBox from './MainFeedBox';
+import FeedInput from './MainFeedBox/FeedInput';
+import FeedLike from './MainFeedBox/FeedLike';
+import FeedImg from './MainFeedBox/FeedImg';
+import MainFeedBox from './MainFeedBox/MainFeedBox';
+import FeedComments from './MainFeedBox/FeedComments';
+import FeedPost from './MainFeedBox/FeedPost';
+import FeedIcon from './MainFeedBox/FeedIcon';
+import FeedHeader from './MainFeedBox/FeedHeader';
 
 const Modal = ({
   setIsModal,
@@ -13,6 +16,8 @@ const Modal = ({
   comments,
   setComments,
   modalComments,
+  viewAll,
+  setViewAll,
 }) => {
   useEffect(() => {
     document.body.style.cssText = `
@@ -29,34 +34,41 @@ const Modal = ({
   return (
     <div
       className="modalWrapper"
-      onClick={() => {
+      onClick={e => {
         setIsModal(!isModal);
       }}
     >
-      <div className="modalFlexBox">
+      <div
+        className="modalFlexBox"
+        onClick={e => {
+          e.stopPropagation();
+        }}
+      >
         <FeedImg />
         <div className="modalContentsBox">
-          <div>
-            {/* <FeedLike
-              value={value}
-              setValue={setValue}
-              comments={comments}
-              setComments={setComments}
-              modalComments={modalComments}
-              // setModalComments={setModalComments}
-            /> */}
+          <div className="modalHeader">
+            <FeedHeader />
+          </div>
+          <div className="modalComments">
+            <FeedPost />
             <FeedComments
               modalComments={modalComments}
               comments={comments}
               setComments={setComments}
+              viewAll={viewAll}
+              setViewAll={setViewAll}
             />
           </div>
-          <FeedInput
-            value={value}
-            setValue={setValue}
-            comments={comments}
-            setComments={setComments}
-          />
+          <div className="modalInput">
+            <FeedIcon />
+            <FeedLike />
+            <FeedInput
+              value={value}
+              setValue={setValue}
+              comments={comments}
+              setComments={setComments}
+            />
+          </div>
         </div>
       </div>
     </div>

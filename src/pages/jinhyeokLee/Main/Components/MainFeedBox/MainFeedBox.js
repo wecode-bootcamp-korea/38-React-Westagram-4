@@ -4,6 +4,9 @@ import FeedImg from './FeedImg';
 import FeedLike from './FeedLike';
 import FeedComments from './FeedComments';
 import FeedInput from './FeedInput';
+import FeedIcon from './FeedIcon';
+import FeedPost from './FeedPost';
+import Modal from '../Modal';
 
 const MainFeedBox = () => {
   //댓글 value값 가져와서 저장
@@ -12,29 +15,45 @@ const MainFeedBox = () => {
   const [comments, setComments] = useState([]);
   //댓글 분리
   const [modalComments, setModalComments] = useState(false);
-  console.log(modalComments);
+  const [viewAll, setViewAll] = useState(false);
+  const [isModal, setIsModal] = useState(false);
+  const ModalHandler = () => {
+    setIsModal(prev => !prev);
+  };
 
   return (
     <div className="feedBox">
       <FeedHeader />
       <FeedImg />
-      <FeedLike
-        value={value}
-        setValue={setValue}
+      <FeedIcon />
+      <FeedLike />
+      <FeedPost />
+      <FeedComments
         comments={comments}
         setComments={setComments}
-        modalComments={modalComments}
+        ModalHandler={ModalHandler}
+        setViewAll={setViewAll}
         setModalComments={setModalComments}
       />
-      <FeedComments comments={comments} setComments={setComments} />
       <FeedInput
         value={value}
         setValue={setValue}
         comments={comments}
         setComments={setComments}
-        modalComments={modalComments}
-        setModalComments={setModalComments}
       />
+      {isModal === true ? (
+        <Modal
+          setIsModal={setIsModal}
+          isModal={isModal}
+          value={value}
+          setValue={setValue}
+          comments={comments}
+          setComments={setComments}
+          modalComments={modalComments}
+          viewAll={viewAll}
+          setViewAll={setViewAll}
+        />
+      ) : null}
     </div>
   );
 };

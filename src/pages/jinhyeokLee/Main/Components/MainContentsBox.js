@@ -1,7 +1,7 @@
 import React from 'react';
 import MainStoryBox from './MainStoryBox';
-import MainFeedBox from './MainFeedBox';
-import MainRecommendBox from './MainRecommendBox';
+import MainFeedBox from './MainFeedBox/MainFeedBox';
+import MainRecommendBox from './MainRecommend/MainRecommendBox';
 const MainContentsBox = () => {
   return (
     <div className="wrapBox">

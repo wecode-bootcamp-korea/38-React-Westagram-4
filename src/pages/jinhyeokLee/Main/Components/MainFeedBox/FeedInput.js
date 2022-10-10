@@ -1,6 +1,7 @@
 import React from 'react';
 
-const FeedInput = ({ value, setValue, comments, setComments }) => {
+const FeedInput = props => {
+  const { value, setValue, comments, setComments } = props;
   //댓글 저장 함수
   const saveComments = () => {
     //랜덤 아이디 생성
@@ -31,7 +32,7 @@ const FeedInput = ({ value, setValue, comments, setComments }) => {
   return (
     <div className="feedInputBox">
       <input
-        id="commentInput"
+        className="feedInput"
         type="text"
         placeholder="댓글 달기..."
         value={value}
@@ -40,7 +41,7 @@ const FeedInput = ({ value, setValue, comments, setComments }) => {
           setValue(e.target.value);
         }}
       />
-      <button id="saveValue" onClick={saveComments}>
+      <button className="feedInputBtn" onClick={saveComments}>
         게시
       </button>
     </div>
