@@ -1,12 +1,12 @@
-@mixin flex($justify, $align) {
+@mixin flex($justify: center, $align: center, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+  flex-direction: $direction;
 }
 
 .main {
-  display: flex;
-  justify-content: center;
+  @include flex(center, null, null);
   width: 100%;
 
   @media (max-width: 830px) {
@@ -30,11 +30,10 @@
     background: white;
   }
   .headerContentBox {
+    @include flex(space-between, center, null);
     max-width: 975px;
     height: 60px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
   }
   .logoImgBox {
@@ -73,8 +72,7 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .searchToggle > div {
-    display: flex;
-    align-items: center;
+    @include flex(null, center, null);
     margin: 15px;
   }
   .searchToggle > div > div {
@@ -90,18 +88,14 @@
   .selectBox {
     min-width: 120px;
     height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(space-between, center, null);
   }
   .selectBox > li {
     width: 50px;
   }
   .selectBox > li > img {
     width: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center, null);
     border-radius: 30px;
     position: relative;
   }
@@ -118,8 +112,7 @@
   .selectBox > li > div > div {
     width: 230px;
     height: 41px;
-    display: flex;
-    align-items: center;
+    @include flex(null, center, null);
     padding-left: 20px;
   }
   .wrapBox {
@@ -165,9 +158,7 @@
       rgb(251, 20, 50),
       rgb(253, 191, 15)
     );
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center, null);
     margin-bottom: 5px;
   }
   .storyImg {
@@ -188,10 +179,8 @@
     background: white;
   }
   .feedHeaderBox {
-    display: flex;
+    @include flex(space-between, center, null);
     height: 56px;
-    justify-content: space-between;
-    align-items: center;
     padding: 8px 12px;
     padding-right: 15px;
     border-bottom: 1px solid rgb(235, 235, 235);
@@ -199,16 +188,13 @@
   .feedHeaderProfle {
     width: 410px;
     height: 40px;
-    display: flex;
-    align-items: center;
+    @include flex(null, center, null);
   }
   .feedProfileBg {
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center, null);
     background: linear-gradient(
       rgb(198, 28, 184),
       rgb(251, 20, 50),
@@ -232,16 +218,13 @@
     display: block;
   }
   .feedIconBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(space-between, center, null);
     padding: 12px;
     border-top: 1px solid rgb(235, 235, 235);
   }
   .feedIconBox > div {
     width: 105px;
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between, null, null);
   }
 
   .feedLikeP {
@@ -287,8 +270,7 @@
   }
 
   .feedComment {
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between, null, null);
     align-items: center;
     height: 20px;
   }
@@ -303,11 +285,9 @@
     margin-left: 10px;
   }
   .feedInputBox {
+    @include flex(space-between, center, null);
     width: 100%;
-    display: flex;
     padding: 10px;
-    justify-content: space-between;
-    align-items: center;
     border-top: 1px solid rgb(235, 235, 235);
   }
   .feedInput {
@@ -325,12 +305,11 @@
     color: rgb(15, 127, 243);
   }
   .myProfileBox {
+    @include flex(space-between, center, null);
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
   .myProfileBg {
+    @include flex(center, center, null);
     width: 58px;
     height: 58px;
     background: linear-gradient(
@@ -339,13 +318,9 @@
       rgb(253, 191, 15)
     );
     border-radius: 58px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .myProfile {
-    display: flex;
-    align-items: center;
+    @include flex(null, center, null);
   }
   .myProfileText {
     margin-left: 12px;
@@ -365,11 +340,9 @@
     color: rgb(15, 127, 243);
   }
   .recommendFriendsBox {
+    @include flex(space-between, center, null);
     width: 100%;
     margin: 15px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   .recommendFriends {
     font-size: 14px;
@@ -381,10 +354,8 @@
     font-weight: 500;
   }
   .friendsListBox {
+    @include flex(space-between, center, null);
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 10px;
     padding-left: 5px;
   }
@@ -397,11 +368,9 @@
     border-radius: 32px;
   }
   .friendsListText {
+    @include flex(center, center, null);
     width: 100%;
-
     margin-left: 10px;
-    align-items: center;
-    justify-content: center;
   }
   .friendsListText > p {
     font-size: 12px;
@@ -412,25 +381,21 @@
     color: rgb(15, 127, 243);
   }
   .modalWrapper {
+    @include flex(center, center, null);
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(100, 100, 100, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .modalFlexBox {
+    @include flex(center, center, null);
     width: 800px;
     z-index: 1000;
     background-color: white;
     font-size: 30px;
     font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .modalContentsBox {
     width: 333px;

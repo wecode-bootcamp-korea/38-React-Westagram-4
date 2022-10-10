@@ -8,8 +8,6 @@
 .login {
   width: 352px;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
   margin-top: 100px;
 
   .instaText {
@@ -124,5 +122,3 @@
     width: 136px;
   }
 }
-
-//사용할 땐 @include felx;
