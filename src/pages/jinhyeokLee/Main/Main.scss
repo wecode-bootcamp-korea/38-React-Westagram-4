@@ -358,18 +358,23 @@
     width: 100%;
     margin-bottom: 10px;
     padding-left: 5px;
+    margin-top: 15px;
+  }
+  .friendsList {
+    @include flex(null, center, null);
   }
   .friendsListBox > div {
     display: flex;
   }
   .friendsListBox > div > img {
-    width: 32px;
-    height: 32px;
-    border-radius: 32px;
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
   }
   .friendsListText {
     width: 100%;
     margin-left: 10px;
+    padding-bottom: 3px;
   }
   .friendsListText > p {
     font-size: 12px;

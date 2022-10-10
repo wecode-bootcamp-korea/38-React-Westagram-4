@@ -42,7 +42,7 @@ export const MockData = {
       description: 'Instagram 신규 가입',
     },
     {
-      img: 'https://file.mk.co.kr/meet/neds/2021/02/image_readtop_2021_120331_16124378164531880.jpg',
+      img: 'https://mblogthumb-phinf.pstatic.net/MjAxODA2MTZfNjMg/MDAxNTI5MTQ3Mzg1MTY5.1-hHZfrMV1K_5B145QogNIJb5crveE4Twk6i2OTFMUcg.-XVhdLcc7lfFibF2IlkgECnu_dGI_LLmnlTOAsopAMUg.JPEG.choeara/IMG_1690.jpg?type=w800',
       nickname: 'gwanhyeon9',
       description: '회원님을 위한 추천',
     },
