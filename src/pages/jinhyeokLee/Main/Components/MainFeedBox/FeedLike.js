@@ -1,10 +1,10 @@
 import React from 'react';
 
-const FeedLike = () => {
+const FeedLike = props => {
   return (
     <p className="feedLikeP">
-      <span className="feedLikeSpan">gangnam.matzip</span> 님{' '}
-      <span className="feedLikeSpan">외 174명</span>이 좋아합니다
+      <span className="feedLikeSpan">{props.like}</span> 님{' '}
+      <span className="feedLikeSpan">{props.likeSum}</span>이 좋아합니다
     </p>
   );
 };

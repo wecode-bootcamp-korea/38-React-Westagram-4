@@ -140,7 +140,6 @@
     border-radius: 8px;
     background: white;
     overflow: hidden;
-    margin-bottom: 18px;
   }
 
   .storyBox {
@@ -177,6 +176,7 @@
     border: 1px solid rgb(211, 211, 211);
     border-radius: 8px;
     background: white;
+    margin-top: 18px;
   }
   .feedHeaderBox {
     @include flex(space-between, center, null);
@@ -424,7 +424,7 @@
   .modalInput {
     width: 330px;
     position: fixed;
-    bottom: 125px;
+    bottom: 130px;
     background: white;
   }
   .recommendAside > li {

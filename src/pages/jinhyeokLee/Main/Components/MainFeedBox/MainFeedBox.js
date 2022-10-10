@@ -8,7 +8,9 @@ import FeedIcon from './FeedIcon';
 import FeedPost from './FeedPost';
 import Modal from '../../shared/Modal';
 
-const MainFeedBox = () => {
+const MainFeedBox = props => {
+  const { profileImg, nickname, feedImg, feedDescription, like, likeSum } =
+    props;
   //댓글 value값 가져와서 저장
   const [value, setValue] = useState('');
   //댓글 관리
@@ -23,11 +25,11 @@ const MainFeedBox = () => {
 
   return (
     <div className="feedBox">
-      <FeedHeader />
-      <FeedImg />
+      <FeedHeader profileImg={profileImg} nickname={nickname} />
+      <FeedImg feedImg={feedImg} />
       <FeedIcon />
-      <FeedLike />
-      <FeedPost />
+      <FeedLike like={like} likeSum={likeSum} />
+      <FeedPost feedDescription={feedDescription} />
       <FeedComments
         comments={comments}
         setComments={setComments}
@@ -52,6 +54,12 @@ const MainFeedBox = () => {
           modalComments={modalComments}
           viewAll={viewAll}
           setViewAll={setViewAll}
+          profileImg={profileImg}
+          nickname={nickname}
+          feedImg={feedImg}
+          like={like}
+          likeSum={likeSum}
+          feedDescription={feedDescription}
         />
       ) : null}
     </div>

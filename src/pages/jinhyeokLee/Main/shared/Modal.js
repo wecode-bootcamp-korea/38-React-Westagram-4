@@ -18,6 +18,12 @@ const Modal = ({
   modalComments,
   viewAll,
   setViewAll,
+  profileImg,
+  nickname,
+  feedImg,
+  feedDescription,
+  like,
+  likeSum,
 }) => {
   useEffect(() => {
     document.body.style.cssText = `
@@ -44,13 +50,13 @@ const Modal = ({
           e.stopPropagation();
         }}
       >
-        <FeedImg />
+        <FeedImg feedImg={feedImg} />
         <div className="modalContentsBox">
           <div className="modalHeader">
-            <FeedHeader />
+            <FeedHeader profileImg={profileImg} nickname={nickname} />
           </div>
           <div className="modalComments">
-            <FeedPost />
+            <FeedPost feedDescription={feedDescription} />
             <FeedComments
               modalComments={modalComments}
               comments={comments}
@@ -61,7 +67,7 @@ const Modal = ({
           </div>
           <div className="modalInput">
             <FeedIcon />
-            <FeedLike />
+            <FeedLike like={like} likeSum={likeSum} />
             <FeedInput
               value={value}
               setValue={setValue}

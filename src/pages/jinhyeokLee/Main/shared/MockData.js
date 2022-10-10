@@ -52,6 +52,28 @@ export const MockData = {
       description: 'hyeob2019님 외 5명이 팔로우합니다',
     },
   ],
+  feedData: [
+    {
+      profileImg:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6UBRf0I6knHvGQGLcYH8fL0ydq4hHi6f2yg&usqp=CAU',
+      nickname: 'asdads',
+      feedImg:
+        'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
+      feedDescription: '이것은 피드 내용이다~,~',
+      like: 'gangnam.matzip',
+      likeSum: '외 174명',
+    },
+    {
+      profileImg:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6UBRf0I6knHvGQGLcYH8fL0ydq4hHi6f2yg&usqp=CAU',
+      nickname: 'zi_nukk',
+      feedImg:
+        'https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png',
+      feedDescription: '이것은 피드 내용이다~,~',
+      like: 'gangnam.matzip',
+      likeSum: '외 174명',
+    },
+  ],
   asideData: [
     '소개',
     '도움말',
