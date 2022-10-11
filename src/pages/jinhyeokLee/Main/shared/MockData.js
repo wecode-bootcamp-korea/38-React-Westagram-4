@@ -83,16 +83,6 @@ export const MockData = {
       like: 'gangnam.matzip',
       likeSum: '외 174명',
     },
-    {
-      profileImg:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6UBRf0I6knHvGQGLcYH8fL0ydq4hHi6f2yg&usqp=CAU',
-      nickname: 'mi._.yeon',
-      feedImg:
-        'https://mblogthumb-phinf.pstatic.net/MjAyMTA3MTJfMjYx/MDAxNjI2MDQ1Mzk2NzI1.wPOZpA4eJ-hOLL5ktbeD8HneX0Mxm5bAnojZV1NB-SMg.EoU_Se3-qSDCSllBt5KHvd_15O3nh5ZP5nxe5CmMizEg.JPEG.oyeonwol0311/1626045389738.jpg?type=w800',
-      feedDescription: '하,,',
-      like: 'neverland',
-      likeSum: '외 174명',
-    },
   ],
   asideData: [
     '소개',
