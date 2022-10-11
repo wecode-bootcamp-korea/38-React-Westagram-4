@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const LoginBox = () => {
-  //페이지 이동
   const navigate = useNavigate();
 
   //아이디, 비밀번호
@@ -12,8 +11,8 @@ const LoginBox = () => {
   });
 
   //value 설정
-  const saveUserId = props => e => {
-    setValues({ ...values, [props]: e.target.value });
+  const saveUserId = e => {
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   //validation 체크
@@ -27,16 +26,18 @@ const LoginBox = () => {
       <form>
         <input
           className="input"
-          onChange={saveUserId('userId')}
+          name="userId"
           type="text"
           placeholder="전화번호, 사용자, 이름 또는 이메일"
+          onChange={saveUserId}
         />
         <input
           className="input"
-          onChange={saveUserId('userPassword')}
+          name="userPassword"
           type="password"
           placeholder="비밀번호"
           autoComplete="off"
+          onChange={saveUserId}
         />
       </form>
       {validationCheck() ? (
