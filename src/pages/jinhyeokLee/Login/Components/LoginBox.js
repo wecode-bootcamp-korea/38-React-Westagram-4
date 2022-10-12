@@ -6,8 +6,8 @@ const LoginBox = () => {
 
   //아이디, 비밀번호
   const [values, setValues] = useState({
-    userId: '',
-    userPassword: '',
+    id: '',
+    password: '',
   });
 
   //value 설정
@@ -17,7 +17,32 @@ const LoginBox = () => {
 
   //validation 체크
   const validationCheck = () => {
-    return values.userId.includes('@') && values.userPassword.length > 5;
+    return values.id.includes('@') && values.password.length > 5;
+  };
+
+  const postLoginData = () => {
+    fetch('http://westagram-signup.herokuapp.com/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    })
+      .then(res => {
+        if (res.ok) {
+          console.log(res);
+          return res.json();
+        }
+      })
+      .then(result => {
+        if (result.message === 'login success') {
+          localStorage.setItem('token', result.token);
+          alert('로그인 성공');
+          navigate(`/main-jinhyeok`);
+        } else {
+          alert('로그인 실패');
+        }
+      });
   };
 
   return (
@@ -26,14 +51,14 @@ const LoginBox = () => {
       <form>
         <input
           className="input"
-          name="userId"
+          name="id"
           type="text"
           placeholder="전화번호, 사용자, 이름 또는 이메일"
           onChange={saveUserId}
         />
         <input
           className="input"
-          name="userPassword"
+          name="password"
           type="password"
           placeholder="비밀번호"
           autoComplete="off"
@@ -43,7 +68,9 @@ const LoginBox = () => {
       {validationCheck() ? (
         <button
           className="loginButton"
-          onClick={() => navigate(`/main-jinhyeok`)}
+          onClick={() => {
+            postLoginData();
+          }}
         >
           로그인
         </button>

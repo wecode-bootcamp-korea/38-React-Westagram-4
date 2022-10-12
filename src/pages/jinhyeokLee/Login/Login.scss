@@ -87,11 +87,13 @@
     font-weight: bold;
     font-size: 14px;
     margin: 20px 0px;
+
+    p {
+      padding-top: 2.5px;
+      padding-left: 10px;
+    }
   }
-  .facebookBox > p {
-    padding-top: 2.5px;
-    padding-left: 10px;
-  }
+
   .forgotPass {
     text-align: center;
     font-size: 12px;
@@ -104,11 +106,13 @@
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(211, 211, 211);
     margin-top: 10px;
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+    }
   }
-  .accountBox > p {
-    font-size: 14px;
-    font-weight: 400;
-  }
+
   span {
     color: rgb(15, 127, 243);
     font-weight: 600;
@@ -124,8 +128,9 @@
     width: 350px;
     height: 44px;
     padding: 0 20px;
-  }
-  .downloadBox > img {
-    width: 136px;
+
+    img {
+      width: 136px;
+    }
   }
 }

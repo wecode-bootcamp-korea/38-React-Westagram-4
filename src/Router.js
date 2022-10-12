@@ -6,6 +6,7 @@ import LoginJinhyeok from './pages/jinhyeokLee/Login/Login';
 import MainDoyeon from './pages/doyeonKim/Main/Main';
 import MainEunji from './pages/eunjiKang/Main/Main';
 import MainJinhyeok from './pages/jinhyeokLee/Main/Main';
+import SignUpJinhyeok from './pages/jinhyeokLee/SignUp/SignUp';
 import './styles/reset.scss';
 import './styles/common.scss';
 
@@ -19,6 +20,7 @@ const Router = () => {
         <Route path="/main-doyeon" element={<MainDoyeon />} />
         <Route path="/main-eunji" element={<MainEunji />} />
         <Route path="/main-jinhyeok" element={<MainJinhyeok />} />
+        <Route path="/signup-jinhyeok" element={<SignUpJinhyeok />} />
       </Routes>
     </BrowserRouter>
   );
