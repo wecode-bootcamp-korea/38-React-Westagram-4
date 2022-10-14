@@ -19,29 +19,54 @@ const Login = () => {
 
   const onSubmit = e => {
     e.preventDefault();
+
+    fetch('http://10.58.52.130:3000/auth/signin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: id, password: password }),
+    })
+      .then(res => {
+        if (res.ok === true) {
+          return res.json();
+        }
+      })
+      .then(data => {
+        localStorage.setItem('token', data.accessToken);
+        navigate('/main-eunji');
+      });
+
     setId('');
     setPassword('');
-    reconfirm();
+  };
+
+  const signUp = e => {
+    e.preventDefault();
+    fetch('http://10.58.52.130:3000/auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+      body: JSON.stringify({ email: id, password: password }),
+    })
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        }
+        throw new Error('에러 발생!');
+      })
+      .catch(err => console.log(err));
   };
 
   const isValid = (id.includes('@') || id.length > 5) && password.length > 5;
 
   const validate = () => {
-    btn.current.style.backgroundColor = isValid
-      ? 'black'
-      : 'rgb(165, 205, 241)';
+    btn.current.style.backgroundColor = isValid ? 'black' : 'rgb(50, 126, 240)';
     isValid && setDisabled(false);
-  };
-
-  const reconfirm = () => {
-    isValid && navigate('/main-eunji');
   };
 
   return (
     <main className="login_main">
       <div>
         <div className="logo">Westagram</div>
-        <form className="login_form" onSubmit={onSubmit} onKeyUp={validate}>
+        <form className="login_form" onKeyUp={validate}>
           <input
             type="email"
             value={id}
@@ -56,9 +81,16 @@ const Login = () => {
             required
             placeholder="password"
           />
-          <button type="submit" disabled={disabled} id="submit_btn" ref={btn}>
-            Sign In
+          <button
+            type="submit"
+            disabled={disabled}
+            id="submit_btn"
+            ref={btn}
+            onClick={onSubmit}
+          >
+            Log In
           </button>
+          <button onClick={signUp}>Sign Up</button>
         </form>
         <span className="find_password">Forgot password</span>
       </div>
