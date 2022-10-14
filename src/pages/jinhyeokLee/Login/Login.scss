@@ -1,0 +1,136 @@
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+.login {
+  width: 352px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+  .loginBox {
+    width: 350px;
+    height: 396px;
+    margin-top: 20px;
+    border: 1px solid rgb(211, 211, 211);
+    background-color: rgb(255, 255, 255);
+
+    .instaText {
+      font-family: 'Lobster', cursive;
+      font-size: 50px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .loginButton {
+      @include flex(center, center, null);
+      width: 268px;
+      height: 30px;
+      margin: 14px auto;
+      background-color: rgb(15, 127, 243);
+      border-radius: 5px;
+      font-weight: bold;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .loginButton:disabled {
+      background-color: rgb(164, 216, 252);
+      cursor: default;
+    }
+  }
+  .accountBox {
+    width: 350px;
+    height: 63px;
+  }
+  .input {
+    background-color: rgb(248, 248, 248);
+    width: 268px;
+    height: 38px;
+    font-size: 12px;
+    color: rgb(129, 129, 129);
+    padding-left: 7px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 3px;
+    display: block;
+    margin: 0px auto;
+    margin-top: 6px;
+  }
+
+  .lineBox {
+    @include flex(center, center, null);
+    width: 268px;
+    height: 15px;
+    margin: 0 auto;
+    color: rgb(123, 123, 123);
+    font-size: 13px;
+
+    .line {
+      width: 104.75px;
+      height: 1px;
+      border-top: 0.1px solid rgb(211, 211, 211);
+    }
+
+    .orBox {
+      width: 59.5px;
+      height: 15px;
+      text-align: center;
+    }
+  }
+
+  .facebookBox {
+    @include flex(center, center, null);
+    color: rgb(43, 62, 114);
+    font-weight: bold;
+    font-size: 14px;
+    margin: 20px 0px;
+
+    p {
+      padding-top: 2.5px;
+      padding-left: 10px;
+    }
+  }
+
+  .forgotPass {
+    text-align: center;
+    font-size: 12px;
+    color: rgb(43, 62, 114);
+  }
+  .accountBox {
+    @include flex(center, center);
+    width: 350px;
+    height: 63px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    margin-top: 10px;
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  span {
+    color: rgb(15, 127, 243);
+    font-weight: 600;
+  }
+  .downloadText {
+    width: 350px;
+    text-align: center;
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  .downloadBox {
+    @include flex(space-between, center, null);
+    width: 350px;
+    height: 44px;
+    padding: 0 20px;
+
+    img {
+      width: 136px;
+    }
+  }
+}
