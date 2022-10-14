@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "username": "username1",
+    "userImg": "https://images.unsplash.com/photo-1625897428517-7e2062829a26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "feedImg": "https://images.unsplash.com/uploads/1412594480669535c9ef9/9d85c477?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "feedCaption": "Throwback photo",
+    "hashtag": [
+      { "id": 1, "hashtagCaption": "#newyork" },
+      { "id": 2, "hashtagCaption": "#throwback" }
+    ],
+    "postedTime": "2 hours ago",
+    "liked": {
+      "id": 1,
+      "likedUsername": "hello1234",
+      "userImg": "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80"
+    }
+  },
+  {
+    "id": 2,
+    "username": "username2",
+    "userImg": "https://images.unsplash.com/photo-1627748868900-f2decee603e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    "feedImg": "https://images.unsplash.com/photo-1627748868900-f2decee603e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    "feedCaption": "enjoying this weekend 🍂",
+    "hashtag": [
+      { "id": 1, "hashtagCaption": "#cafe" },
+      { "id": 2, "hashtagCaption": "#autumn" }
+    ],
+    "postedTime": "3 hours ago",
+    "liked": {
+      "id": 1,
+      "likedUsername": "iamtom",
+      "userImg": "https://images.unsplash.com/photo-1581391528803-54be77ce23e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+    }
+  },
+  {
+    "id": 3,
+    "username": "username3",
+    "userImg": "https://images.unsplash.com/photo-1609241824968-2780ccc069e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    "feedImg": "https://images.unsplash.com/photo-1657299142997-cb45f5dfa9ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    "feedCaption": "🌿",
+    "hashtag": [
+      { "id": 1, "hashtagCaption": "#holiday" },
+      { "id": 2, "hashtagCaption": "#withfriend" }
+    ],
+    "postedTime": "4 hours ago",
+    "liked": {
+      "id": 1,
+      "likedUsername": "wecode",
+      "userImg": "https://images.unsplash.com/photo-1550684376-efcbd6e3f031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+    }
+  },
+  {
+    "id": 4,
+    "username": "username4",
+    "userImg": "https://images.unsplash.com/photo-1579710758949-3ab36db30f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    "feedImg": "https://images.unsplash.com/photo-1502700559166-5792585222ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=782&q=80",
+    "feedCaption": "London",
+    "hashtag": [
+      { "id": 1, "hashtagCaption": "#london" },
+      { "id": 2, "hashtagCaption": "#travel" }
+    ],
+    "postedTime": "4 hours ago",
+    "liked": {
+      "id": 1,
+      "likedUsername": "wecode",
+      "userImg": "https://images.unsplash.com/photo-1550684376-efcbd6e3f031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+    }
+  }
+]
