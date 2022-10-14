@@ -29,19 +29,19 @@ const LoginBox = () => {
       body: JSON.stringify(values),
     })
       .then(res => {
-        if (res.ok) {
-          console.log(res);
-          return res.json();
+        if (!res.ok) {
+          throw new Error(`로그인에서 ${res.status} 에러가 발생했습니다 `);
         }
+        return res.json();
       })
       .then(result => {
-        if (result.message === 'login success') {
-          localStorage.setItem('token', result.token);
-          alert('로그인 성공');
-          navigate(`/main-jinhyeok`);
-        } else {
-          alert('로그인 실패');
-        }
+        localStorage.setItem('token', result.token);
+        alert('로그인 성공');
+        navigate(`/main-jinhyeok`);
+      })
+      .catch(error => {
+        console.log(error.message);
+        alert('로그인 실패');
       });
   };
 

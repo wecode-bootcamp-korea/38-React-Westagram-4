@@ -11,8 +11,8 @@ const SignUpJinhyeok = () => {
   });
 
   //value 설정
-  const saveUserId = e => {
-    setValues({ ...values, [e.target.name]: e.target.value });
+  const saveUserId = props => e => {
+    setValues({ ...values, [props]: e.target.value });
   };
 
   const postData = () => {
@@ -24,23 +24,27 @@ const SignUpJinhyeok = () => {
       body: JSON.stringify(values),
     })
       .then(res => {
-        if (res.ok) {
-          console.log(res);
-          return res.json();
+        if (!res.ok) {
+          throw new Error(`회원가입 ${res.status} 에러가 발생했습니다`);
         }
+        return res.json();
       })
       .then(result =>
         result.message === 'signup success'
           ? (alert('회원가입 성공'), navigate(`/login-jinhyeok`))
           : alert('회원가입 실패')
-      );
+      )
+      .catch(error => {
+        console.log(error.mesasge);
+        alert('회원가입 실패');
+      });
   };
 
   // console.log(values);
   return (
     <div>
-      <input name="id" type="text" onChange={saveUserId} />
-      <input name="password" type="password" onChange={saveUserId} />
+      <input type="text" onChange={saveUserId('id')} />
+      <input type="password" onChange={saveUserId('password')} />
       <button onClick={postData}>회원가입</button>
     </div>
   );
