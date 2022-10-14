@@ -1,6 +1,4 @@
 const StoryProfile = ({ user }) => {
-  // console.log(user);
-
   return (
     <div>
       <div

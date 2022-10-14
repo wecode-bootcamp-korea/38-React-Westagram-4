@@ -1,5 +1,4 @@
 const FeedCaption = ({ username, feedCaption, hashtag }) => {
-  // console.log(hashtag);
   return (
     <div className="feed_des">
       <div>

@@ -4,7 +4,6 @@ import redHeartIcon from '../../../assets/images/eunjikang/icons/red_heart.png';
 
 const FeedBottomBar = ({ liked }) => {
   const [like, setLike] = useState(false);
-  //  console.log(liked.userImg);
 
   const onToggle = () => {
     setLike(prev => !prev);

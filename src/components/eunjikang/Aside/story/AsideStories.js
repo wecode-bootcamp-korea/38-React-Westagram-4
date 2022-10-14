@@ -2,7 +2,6 @@ import AsideBar from '../AsideBar';
 import StoryProfile from './StoryProfile';
 
 const AsideStories = ({ storyUsers }) => {
-  // console.log(storyUsers);
   return (
     <section className="stories">
       <AsideBar name="Stories" />

@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
-import './Login.scss';
 import { useNavigate } from 'react-router-dom';
+import './Login.scss';
 
 const Login = () => {
   const [id, setId] = useState('');
@@ -45,14 +45,12 @@ const Login = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json;charset=utf-8' },
       body: JSON.stringify({ email: id, password: password }),
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        throw new Error('에러 발생!');
-      })
-      .catch(err => console.log(err));
+    }).then(res => {
+      if (res.ok) {
+        return res.json();
+      }
+      throw new Error('에러 발생!');
+    });
   };
 
   const isValid = (id.includes('@') || id.length > 5) && password.length > 5;

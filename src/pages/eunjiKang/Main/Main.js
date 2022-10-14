@@ -1,9 +1,9 @@
-import './Main.scss';
-import './responsive.scss';
+import { useEffect, useState } from 'react';
 import Aside from '../../../components/eunjikang/Aside/Aside';
 import Feed from '../../../components/eunjikang/Feed/Feed';
 import Nav from '../../../components/Nav/Nav';
-import { useEffect, useState } from 'react';
+import './Main.scss';
+import './responsive.scss';
 
 const Main = () => {
   const [feeds, setFeeds] = useState(null);
